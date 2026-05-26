@@ -7,10 +7,12 @@ class CalculatorError(Exception):
 
 
 class InvalidInputError(CalculatorError, TypeError):
+    """Invalid Input issuw"""
     pass
 
 
 class DivisionByZeroError(CalculatorError, ZeroDivisionError):
+    "Not diivisible by zero"
     pass
 
 
@@ -24,21 +26,25 @@ def _validate_numbers(a, b):
 
 
 def add(a: float, b: float) -> float:
+    """Addition function"""
     _validate_numbers(a, b)
     return a + b
 
 
 def subtract(a: float, b: float) -> float:
+    """Subtraction Function"""
     _validate_numbers(a, b)
     return a - b
 
 
 def multiply(a: float, b: float) -> float:
+    """Multiplication Function"""
     _validate_numbers(a, b)
     return a * b
 
 
 def divide(a: float, b: float) -> float:
+    """Division Functiom"""
     _validate_numbers(a, b)
 
     if b == 0:
